@@ -1,0 +1,9 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-paper text-ink font-sans antialiased; }
+:focus-visible { outline: 2px solid #d6391f; outline-offset: 3px; }
+::selection { background: #1c1d21; color: #fff; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 40s linear infinite; }
+@keyframes drop { 0% { transform: translateY(-100%); } 100% { transform: translateY(260%); } }
